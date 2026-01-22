@@ -26,19 +26,19 @@
 
     <div class="server-list">
 
-      <div class="server-card">
+      <div class="server-card reveal">
         <h3>⟣ Hub ReportsxServeurs <i class="fa-solid fa-flag"></i></h3>
         <p>Serveur reports sérieux et à permettre aux owners/staff de faire de la publicité encadrée !</p>
         <a href="https://discord.gg/HqEQ7dPbzw" target="_blank"><i class="fa-solid fa-arrow-right"></i> Rejoindre !</a>
       </div>
 
-      <div class="server-card">
+      <div class="server-card reveal">
         <h3>⟣ Sekkusu <i class="fa-solid fa-fire"></i></h3>
         <p>Communauté SFW & NSFW inspirée de l’Asie ancienne, catégories NSFW/ERP/RP/etc..</p>
         <a href="https://discord.gg/sekkusu" target="_blank"><i class="fa-solid fa-arrow-right"></i> Rejoindre !</a>
       </div>
 
-      <div class="server-card">
+      <div class="server-card reveal">
         <h3>⟣ Design&Discord <i class="fa-solid fa-palette"></i></h3>
         <p>D&D sert à centraliser mes offres en terme de créations de serveurs Discord !</p>
         <a href="https://discord.gg/U7uk2XNVb5" target="_blank"><i class="fa-solid fa-arrow-right"></i> Rejoindre !</a>
@@ -50,10 +50,7 @@
   <section class="tos">
     <h2>Règles Générales :</h2>
     <ul>
-      <li>
-  Respect obligatoire des
-  <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">
-    TOS Discord.
+      <li>Respect obligatoire des <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">TOS Discord.
   </a>
 </li>
       <li>Le contenu illégal est strictement interdit.</li>
@@ -61,13 +58,38 @@
       <li>Le non-respect des règles peut entraîner un bannissement inter-serveurs.</li>
     </ul>
   </section>
+  <div class="banner">
+  <img src="images/serpent.gif" alt="Animation décorative">
+</div>
 
   <footer>
     <p>© 2026 - notbadslayer._</p>
   </footer>
 
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach((el, index) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        setTimeout(() => {
+          el.classList.add('active');
+        }, index * 150); // délai entre les cartes
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
 </body>
 </html>
+
 
 
 
