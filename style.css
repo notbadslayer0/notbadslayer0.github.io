@@ -103,6 +103,7 @@ footer {
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(88, 101, 242, 0.4);
 }
+
 .server-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -125,22 +126,6 @@ footer {
 
 .tos a:hover {
   text-decoration: underline;
-}
-
-.banner {
-  margin: 20px auto 40px;
-  animation: fadeInUp 1.2s ease-out;
-  transform: translateY(10px);
-  transform: translateY(20px);
-}
-
-.banner img {
-  width: 100%;
-  max-width: 700px;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(88, 101, 242, 0.35);
 }
 
 @keyframes fadeInUp {
